@@ -1,0 +1,21 @@
+{
+  "name": "backend-telegram",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": "git@github.com:pndek-in/backend-telegram.git",
+  "author": "jal <jaluwibowoaji@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@telegraf/session": "^2.0.0-beta.6",
+    "redis": "^4.6.12",
+    "telegraf": "^4.15.3"
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.5",
+    "nodemon": "^3.0.3"
+  }
+}
