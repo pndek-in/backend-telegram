@@ -4,11 +4,14 @@ if (process.env.NODE_ENV !== "production") {
 
 const { Telegraf, session, Markup } = require("telegraf")
 const { Redis } = require("@telegraf/session/redis")
+const { createClient } = require("redis")
 const API = require("./utils/api")
 const { HELP, REGEX } = require("./constants")
 
 const store = Redis({
-  url: process.env.REDIS_URL
+  client: createClient({
+    url: process.env.REDIS_URL
+  })
 })
 
 const bot = new Telegraf(process.env.TELEGRAM_BOT_TOKEN)
